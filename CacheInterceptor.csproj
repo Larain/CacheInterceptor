@@ -5,12 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Cache.Tests\**" />
+    <Compile Remove="CacheInterceptor.Contracts\**" />
+    <Compile Remove="_ReSharper.Caches\**" />
+    <EmbeddedResource Remove="Cache.Tests\**" />
+    <EmbeddedResource Remove="CacheInterceptor.Contracts\**" />
+    <EmbeddedResource Remove="_ReSharper.Caches\**" />
+    <None Remove="Cache.Tests\**" />
+    <None Remove="CacheInterceptor.Contracts\**" />
+    <None Remove="_ReSharper.Caches\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Castle.Windsor" Version="5.0.1" />
     <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CacheInterceptor.Contracts\CacheInterceptor.Contracts.csproj" />
+    <ProjectReference Include="CacheInterceptor.Contracts\CacheInterceptor.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
